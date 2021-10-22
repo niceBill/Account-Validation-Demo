@@ -1,0 +1,12 @@
+{
+  "result": [
+    {
+      "provider": "provider1",
+      "isValid": true
+    },
+    {
+      "provider": "provider2",
+      "isValid": false
+    }
+  ]
+}

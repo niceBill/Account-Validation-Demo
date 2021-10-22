@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: AccountValidateService
+
+  profiles:
+    active: dev
+
+server:
+  error:
+    include-message: always
+
+#Below Demonstrates Provider urls can be set for Production and non-Production, respectively
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+providers:
+  url:
+    provider1: https://provider1-dev.com
+    provider2: https://provider2-dev.com
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+providers:
+  url:
+    provider1: https://provider1-prod.com
+    provider2: https://provider2-prod.com
